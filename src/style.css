@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    width: 100%;
+}
+
+/* Encabezado*/
+
+header {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background-color: black;
+    box-shadow: 0 5px 15px rgb(0, 0,0.6) ;
+}
+.logo {
+    /* height: 70px; */
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#navbar li {
+    list-style: none;  /*Para quitar el punto de la lista */
+    margin-top: 25px;
+    padding: 0 25px;
+    position: relative;
+}
+
+#navbar li a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    color: whitesmoke;
+    transition: 0.3s ease;
+}
+#navbar li a:hover, #navbar li a.active {
+    color: blueviolet;
+}
+
+#navbar li a.active::after, #navbar li a:hover::after {
+    content: "";
+    width: 30%;
+    height: 2px;
+    background-color: blueviolet;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
