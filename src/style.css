@@ -58,18 +58,57 @@ header {
     left: 20px;
 }
 main{
-    /* background-image: url("img/rick-and-morty-BackGround.jpg"); */
-    background-image: url("img/Space.jpg");
-    height: 90vh;
+    /* background-image: url("img/rick-and-morty-BackGround.jpg");  */
+    background-image: url("img/Space.jpg");  
+    height: 80vh;
     width: 100%;
     background-size: cover;
     background-position: top 25% right 0;
-    padding: 0 80px;
-    display: flex;
+    padding-left: 400px;
+    display: flex; 
     flex-direction: column;
     align-items: flex-start;
     color: whitesmoke;
 }
 #filter{
     display: inline;
+    position:center;
+}
+
+.select{
+    /* order: 50px; */
+    width: 150px;
+    height: 30px;
+    background-color: #13c4c4;
+    border-radius: 5px;
+    margin-top: 50px;
+    color: #1a4121;
+    font-size: 15px;
+    box-shadow: 3px 3px 7px 1px #898989;
+    cursor: pointer;
+    
+}
+.btn_src{
+    width: 100px;
+    height: 30px;
+    background-color: #640c5c;
+    border-radius: 5px;
+    margin-top: 100px;
+    color: #f2fbf4;
+    font-size: 15px;
+    box-shadow: 3px 3px 7px 1px #898989;
+    cursor: pointer;
+    display: flexbox;
+
+}
+
+#Buttons{
+    margin-top:2%;
+    margin-left: 8%;
+}
+#List{
+    margin-bottom: 1%;
+    margin-top: 10%;
+    background-color:#1a5c29;
+    width: 50%;
 }
