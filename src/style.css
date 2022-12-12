@@ -18,15 +18,17 @@ header {
     padding: 20px 80px;
     background-color: black;
     box-shadow: 0 5px 15px rgb(0, 0,0.6) ;
-}
-.logo {
-    /* height: 70px; */
+    /* z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0; */
 }
 
 #navbar {
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
 #navbar li {
     list-style: none;  /*Para quitar el punto de la lista */
