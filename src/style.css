@@ -8,6 +8,7 @@ body {
     width: 100%;
 }
 
+
 /* Encabezado*/
 
 header {
@@ -53,4 +54,20 @@ header {
     position: absolute;
     bottom: -4px;
     left: 20px;
+}
+main{
+    /* background-image: url("img/rick-and-morty-BackGround.jpg"); */
+    background-image: url("img/Space.jpg");
+    height: 90vh;
+    width: 100%;
+    background-size: cover;
+    background-position: top 25% right 0;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: whitesmoke;
+}
+#filter{
+    display: inline;
 }

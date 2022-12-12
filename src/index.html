@@ -18,11 +18,29 @@
         </ul>
       </nav>
     </header>
-    
+    <main>
+
+   
     <div id="root"></div>
-    <div>
-      Personajes 
+    <div id=filter>
+      <select name="gender" class="select" id="gender">
+        <option>Genero</option>
+        <option value="Female">Femenino</option>
+        <option value="Male">Maculino</option>
+        </select>
+      <select name="species" class="select" id="species">
+          <option>Especie</option>
+          <option value="Human">Humano</option>
+          <option value="Alien">Alien</option>
+          </select>
+      <select name="origin" class="select" id="origin">
+            <option value="">Origen</option>
+            <option value="Earth">Tierra</option>
+            <option value="unknown">Desconocido</option>
+            </select>
+     <h3>Personajes</h3>  
     </div>
+  </main>
     <script src="main.js" type="module"></script>
   </body>
 </html>
