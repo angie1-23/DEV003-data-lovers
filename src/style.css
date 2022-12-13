@@ -45,14 +45,16 @@ header {
     transition: 0.3s ease;
 }
 #navbar li a:hover, #navbar li a.active {
-    color: blueviolet;
+    /* color: blueviolet; */
+    color: #13c4c4;
 }
 
 #navbar li a.active::after, #navbar li a:hover::after {
     content: "";
     width: 30%;
     height: 2px;
-    background-color: blueviolet;
+    background-color: #13c4c4;
+    /* background-color: blueviolet; */
     position: absolute;
     bottom: -4px;
     left: 20px;
@@ -64,19 +66,53 @@ main{
     width: 100%;
     background-size: cover;
     background-position: top 25% right 0;
-    padding-left: 400px;
-    display: flex; 
-    flex-direction: column;
+    padding: 0 100px;
+    /* padding-left: 400px; */ /* Por que colocaste esto?*/
+    /* display: grid;  */
+    display: block;
     align-items: flex-start;
     color: whitesmoke;
 }
 #filter{
-    display: inline;
-    position:center;
+    
+    padding: 0 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+ 
+} 
+
+#filter .select{
+    width: 150px;
+    text-align: center;
+    padding: 5px 2px;
+    box-shadow: 3px 3px 7px #898989 ;
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+    background-color: #13c4c4;
+    color: #1a4121;
+    font-size: 15px;
+    cursor: pointer;
+    
+
+}
+#filter .search{
+    width: 150px;
+    height: 30px;
+    border-radius: 3px;
+    padding-left: 3.5px;
+
 }
 
+
+/*Este es el original
+#filter{
+    display: flex;
+    position: center;
+}
 .select{
-    /* order: 50px; */
+     order: 50px; 
     width: 150px;
     height: 30px;
     background-color: #13c4c4;
@@ -88,6 +124,9 @@ main{
     cursor: pointer;
     
 }
+
+*/
+
 .btn_src{
     width: 100px;
     height: 30px;
@@ -111,4 +150,14 @@ main{
     margin-top: 10%;
     background-color:#1a5c29;
     width: 50%;
+}
+
+footer{
+    display: grid;
+    color: #13c4c4;
+    text-align: center;
+    padding: 20px 80px;
+    background-color: black;
+    box-shadow: 0 5px 15px rgb(0, 0,0.6) ;
+   
 }
