@@ -1,10 +1,18 @@
+
 // estas funciones son de ejemplo
+// const dataAll = data.results;
 
-export const filterGender = (dataGender, string) => {
-  const newGender=dataGender.filter((obj) => obj.Female === string);
-  return newGender;
+export const filterGender = (dataAll, string) => {
+  const nuevoArray = dataAll.filter((obj) => obj.gender === string); //female Male
+  return nuevoArray;
 };
 
-export const anotherExample = () => {
-  return 'OMG';
-};
+// export const genderData =  dataGender.filter((item) => item.Female === string);
+// console.log(genderData);
+
+
+// export const anotherExample = () => {
+//   return 'OMG';
+// };
+
+
