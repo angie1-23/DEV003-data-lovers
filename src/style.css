@@ -6,6 +6,8 @@
 }
 body {
     width: 100%;
+    /* background-color: #000000; */
+    background-image: url("img/Space.jpg");   
 }
 
 
@@ -61,8 +63,8 @@ header {
 }
 main{
     /* background-image: url("img/rick-and-morty-BackGround.jpg");  */
-    background-image: url("img/Space.jpg");  
-    height: 80vh;
+    /* background-image: url("img/Space.jpg");   */
+    height: 500vh;
     width: 100%;
     background-size: cover;
     background-position: top 25% right 0;
@@ -110,48 +112,78 @@ main{
 #filter{
     display: flex;
     position: center;
-}
-.select{
-     order: 50px; 
-    width: 150px;
-    height: 30px;
-    background-color: #13c4c4;
-    border-radius: 5px;
-    margin-top: 50px;
-    color: #1a4121;
-    font-size: 15px;
-    box-shadow: 3px 3px 7px 1px #898989;
-    cursor: pointer;
-    
-}
 
-*/
-
-.btn_src{
-    width: 100px;
-    height: 30px;
-    background-color: #640c5c;
-    border-radius: 5px;
-    margin-top: 100px;
-    color: #f2fbf4;
-    font-size: 15px;
-    box-shadow: 3px 3px 7px 1px #898989;
-    cursor: pointer;
-    display: flexbox;
-
-}
 
 #Buttons{
     margin-top:2%;
     margin-left: 8%;
 }
-#List{
-    margin-bottom: 1%;
-    margin-top: 10%;
-    background-color:#1a5c29;
-    width: 50%;
+
+/* .resultCard{
+
+    display:flex;
+} */
+
+.cardDiv{
+    display: inline-flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+}
+.cardBoxDiv {
+    width: 200px;
+     height: 200px;  
+    background-color: #13C4C4;
+    backdrop-filter: blur(40px); 
+    text-align: center;
+    border-radius: 5px;
+    border: 2px solid  #14B1B1;
+    margin:10px;
+    color: #F2FBF4;
+    font-size: 15px;
+    padding: 10px 20px 10px;
+ } 
+ .cardBoxDiv img{
+    width: 100px;
+
+ }
+ .contenedorModal{
+    display: none;
+    position: fixed;
+    top: 30%; left: 20%;
+    z-index:2;
+    background-color: #f0f4f0;
+    width: 60%;
+    border-radius: 20px;
+    font-size: 15px;
+    text-align: center;
+    animation-name: modal;
+    animation-duration: 2s;
+    color: #000000;
+ }
+
+ .contenedorModal img{
+    width: 250px;
 }
 
+ .cardBoxDiv:hover{
+    background-color: rgb(225, 246, 111);
+    cursor: pointer;
+}
+.close{
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    font-weight: bold;
+    position: inherit;
+    top: 30%;
+    right: 22%;
+}
+
+.close:hover{
+    color: rgb(6, 106, 113);
+    text-decoration: none;
+    cursor: pointer;
+}
 footer{
     display: grid;
     color: #13c4c4;
