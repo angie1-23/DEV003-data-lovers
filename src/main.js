@@ -1,4 +1,6 @@
-import {   filterGender } from './data.js';
+import {   filterGender,filterSpecies,filterOrigin,filterCharacters
+       
+ } from './data.js';
 // import rickandmorty from './data/rickandmorty/rickandmorty.js';
 // import data from './data/rickandmorty/rickandmorty.js';
 import data from './data/rickandmorty/rickandmorty.js';
@@ -48,13 +50,19 @@ const containerElement = (obj) =>{
 }
 
 //Seleccionar el padre
-const insertAllResult = document.querySelector('.resultCard');
+const insertAllResult= document.querySelector('.resultCard');
 
 const verPersonajes = (data) =>{
   data.forEach(obj => {
     insertAllResult.appendChild(containerElement(obj))
   });
 }
+// verPersonajes(dataResult);
+// const verPersonajes = (data) =>{
+//   data.map(obj => {
+//     insertAllResult.appendChild(containerElement(obj))
+//   });
+// }
 verPersonajes(dataResult);
 
 
@@ -63,20 +71,46 @@ verPersonajes(dataResult);
 const filterGenderEl = document.querySelector("#gender");
 
 //Filtro por genero
-filterGenderEl.addEventListener('change', function() {
+filterGenderEl.addEventListener('click', function() {
   insertAllResult.innerHTML = "";
   const gender = verPersonajes(filterGender(dataResult,filterGenderEl.value));
-  gender;
-  // console.log(filterGenderEl.value);
-  // console.log(gender);
+  return gender;
 });
 
-console.log( typeof dataResult);
+// Filtro por especie
 
-// // filtro Huevos por kilometro
-// const filtrarHuevos = document.querySelector('#filtrar-huevos-km');
-// filtrarHuevos.addEventListener('change', () => {
-//   insertAllPokemon.innerHTML = '';
-//   verPokemon(filtrarpokemonKm(POKEMON, filtrarHuevos.value));
-// });
+// El boton de especie en HTML
+
+const filterSpeciesEl= document.querySelector("#species");
+
+// Filtro por especie
+filterSpeciesEl.addEventListener('click',function(){
+  insertAllResult.innerHTML="";
+  const specie =verPersonajes(filterSpecies(dataResult,filterSpeciesEl.value))
+  return specie;
+});
+
+// Boton por origin 
+
+const filterOriginEl= document.querySelector("#origin");
+ // Filtro por origin
+
+filterOriginEl.addEventListener('click',function(){
+  insertAllResult.innerHTML="";
+  const origin=verPersonajes(filterOrigin(dataResult,filterOriginEl.value))
+  return origin;
+})
+
+// Buscador por personaje
+
+const searchCharacthersEl= document.querySelector("#search");
+
+//Filtro por personajes
+
+searchCharacthersEl.addEventListener('input',function(){
+  insertAllResult.innerHTML="";
+  const characters = searchCharacthersEl.value.toLowerCase();
+  verPersonajes(filterCharacters(dataResult,characters));
+})
+
 
