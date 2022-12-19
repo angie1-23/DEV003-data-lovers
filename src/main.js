@@ -1,6 +1,6 @@
 import {   filterGender,filterSpecies,filterOrigin,filterCharacters
        
- } from './data.js';
+} from './data.js';
 // import rickandmorty from './data/rickandmorty/rickandmorty.js';
 // import data from './data/rickandmorty/rickandmorty.js';
 import data from './data/rickandmorty/rickandmorty.js';
@@ -93,7 +93,7 @@ filterSpeciesEl.addEventListener('click',function(){
 // Boton por origin 
 
 const filterOriginEl= document.querySelector("#origin");
- // Filtro por origin
+// Filtro por origin
 
 filterOriginEl.addEventListener('click',function(){
   insertAllResult.innerHTML="";

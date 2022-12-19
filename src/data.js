@@ -22,6 +22,6 @@ export const filterOrigin = (dataAll, string) => {
 export const filterCharacters = (dataAll,string) => {
   const nuevoArray = dataAll.filter((obj)=> obj.name.toLowerCase().startsWith(string));
   return nuevoArray;
- };
+};
 
 
