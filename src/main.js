@@ -1,4 +1,5 @@
-import {   filterGender,filterSpecies,filterOrigin,filterCharacters
+import {   filterGender,filterSpecies,filterOrigin,filterCharacters,filterLocation,
+  filterStatus
        
 } from './data.js';
 // import rickandmorty from './data/rickandmorty/rickandmorty.js';
@@ -101,6 +102,31 @@ filterOriginEl.addEventListener('click',function(){
   return origin;
 })
 
+// Boton por locacion
+
+const filterLocationEl= document.querySelector("#location");
+ // Filtro por locacion
+
+filterLocationEl.addEventListener('click',function(){
+  insertAllResult.innerHTML="";
+  const location=verPersonajes(filterLocation(dataResult,filterLocationEl.value))
+  return location;
+})
+
+// Boton por Status
+
+const filterStatusEl= document.querySelector("#status");
+ // Filtro por locacion
+
+ filterStatusEl.addEventListener('click',function(){
+  insertAllResult.innerHTML="";
+  const status=verPersonajes(filterStatus(dataResult,filterStatusEl.value))
+  return status;
+})
+
+
+
+
 // Buscador por personaje
 
 const searchCharacthersEl= document.querySelector("#search");
@@ -112,5 +138,6 @@ searchCharacthersEl.addEventListener('input',function(){
   const characters = searchCharacthersEl.value.toLowerCase();
   verPersonajes(filterCharacters(dataResult,characters));
 })
+
 
 

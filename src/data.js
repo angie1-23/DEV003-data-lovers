@@ -24,4 +24,14 @@ export const filterCharacters = (dataAll,string) => {
   return nuevoArray;
 };
 
+ export const filterLocation= (dataAll, string) => {
+  const nuevoArray = dataAll.filter((obj) => obj.location.name === string); // Alien Humanoide
+  return nuevoArray;
+};
+
+export const filterStatus= (dataAll, string) => {
+  const nuevoArray = dataAll.filter((obj) => obj.status === string); // Alien Humanoide
+  return nuevoArray;
+};
+
 
