@@ -48,6 +48,14 @@ const containerElement = (obj) =>{
     divElement.querySelector('.contenedorModal').style.display = 'none';
     document.querySelector('.my-modal').style.display = 'none';
   });
+  //Ocultar con escape
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape')
+      divElement.querySelector('.contenedorModal').style.display = 'none';
+    document.querySelector('.my-modal').style.display = 'none';
+    
+
+  })
 
   return divElement;
 }
@@ -74,10 +82,10 @@ verPersonajes(dataResult);
 const filterGenderEl = document.querySelector("#gender");
 
 //Filtro por genero
-filterGenderEl.addEventListener('click', function() {
+filterGenderEl.addEventListener('change', function() {
   insertAllResult.innerHTML = "";
-  const gender = verPersonajes(filterGender(dataResult,filterGenderEl.value));
-  return gender;
+  verPersonajes(filterGender(dataResult,filterGenderEl.value));
+  
 });
 
 // Filtro por especie
@@ -87,10 +95,10 @@ filterGenderEl.addEventListener('click', function() {
 const filterSpeciesEl= document.querySelector("#species");
 
 // Filtro por especie
-filterSpeciesEl.addEventListener('click',function(){
+filterSpeciesEl.addEventListener('change',function(){
   insertAllResult.innerHTML="";
-  const specie =verPersonajes(filterSpecies(dataResult,filterSpeciesEl.value))
-  return specie;
+  verPersonajes(filterSpecies(dataResult,filterSpeciesEl.value))
+ 
 });
 
 // Boton por origin 
@@ -98,32 +106,31 @@ filterSpeciesEl.addEventListener('click',function(){
 const filterOriginEl= document.querySelector("#origin");
 // Filtro por origin
 
-filterOriginEl.addEventListener('click',function(){
+filterOriginEl.addEventListener('change',function(){
   insertAllResult.innerHTML="";
-  const origin=verPersonajes(filterOrigin(dataResult,filterOriginEl.value))
-  return origin;
+  verPersonajes(filterOrigin(dataResult,filterOriginEl.value))
 })
 
 // Boton por locacion
 
 const filterLocationEl= document.querySelector("#location");
- // Filtro por locacion
+// Filtro por locacion
 
-filterLocationEl.addEventListener('click',function(){
+filterLocationEl.addEventListener('change',function(){
   insertAllResult.innerHTML="";
-  const location=verPersonajes(filterLocation(dataResult,filterLocationEl.value))
-  return location;
+  verPersonajes(filterLocation(dataResult,filterLocationEl.value))
+ 
 })
 
 // Boton por Status
 
 const filterStatusEl= document.querySelector("#status");
- // Filtro por locacion
+// Filtro por locacion
 
- filterStatusEl.addEventListener('click',function(){
+filterStatusEl.addEventListener('change',function(){
   insertAllResult.innerHTML="";
-  const status=verPersonajes(filterStatus(dataResult,filterStatusEl.value))
-  return status;
+  verPersonajes(filterStatus(dataResult,filterStatusEl.value))
+  
 })
 // Buscador por personaje
 
@@ -143,10 +150,10 @@ const orderCharacthersEl= document.querySelector("#order");
 
 // filtro alfabeto
 
-orderCharacthersEl.addEventListener('click',function(){
+orderCharacthersEl.addEventListener('change',function(){
   insertAllResult.innerHTML="";
-  const orderCharacther =verPersonajes(oderAlphabetically(dataResult,orderCharacthersEl.value));
-  return orderCharacther
+  verPersonajes(oderAlphabetically(dataResult,orderCharacthersEl.value));
+ 
 })
 
 
