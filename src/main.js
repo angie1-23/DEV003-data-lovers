@@ -8,6 +8,12 @@ import data from './data/rickandmorty/rickandmorty.js';
 // console.log(example, data);
 
 
+// const startbtnEl = document.getElementById('inicio');
+
+// startbtnEl.addEventListener('click',  ()=> {
+//   window.location.href = 'index.html';
+// })
+
 //La data tomada del archivo './data/rickandmorty/rickandmorty.js'
 const dataResult = data.results;
 
@@ -65,7 +71,7 @@ const insertAllResult= document.querySelector('.resultCard');
 
 const verPersonajes = (data) =>{
   data.forEach(obj => {
-    insertAllResult.appendChild(containerElement(obj))
+    insertAllResult.appendChild(containerElement(obj));
   });
 }
 // verPersonajes(dataResult);
@@ -142,6 +148,7 @@ searchCharacthersEl.addEventListener('input',function(){
   insertAllResult.innerHTML="";
   const characters = searchCharacthersEl.value.toLowerCase();
   verPersonajes(filterCharacters(dataResult,characters));
+
 })
 
 // Ordenar alfabeticamente

@@ -45,6 +45,5 @@ export const oderAlphabetically=(dataAll, string) =>{
     return orderAZ.reverse();
   }
 
-  return orderAZ;
 }
 
