@@ -21,12 +21,15 @@ header {
     padding: 20px 80px;
     background-color: black;
     box-shadow: 0 5px 15px rgb(0, 0,0.6) ;
-    z-index: 999;
+    z-index: 4;
     position: sticky;
     top: 0;
     left: 0;
 }
+.menu-icon{
+    display: none;
 
+}
 #navbar {
     display: flex;
     align-items: center;
@@ -34,6 +37,7 @@ header {
     flex-wrap: wrap;
 
 }
+
 #navbar li {
     list-style: none;  /*Para quitar el punto de la lista */
     margin-top: 25px;
@@ -66,7 +70,7 @@ header {
 
 main{
    
-    height: 500vh;
+    height: 140vh;
     width: 100%;
     background-size: cover;
     background-position: top 25% right 0;
@@ -130,6 +134,8 @@ a:visited {
 
 .resultCard {
     text-align: center;
+    overflow: auto;
+    height:70vh;
 }
 
 #filter .select{
@@ -242,25 +248,53 @@ footer{
 @media only screen and (max-width: 880px) {
     
     header{
-        display: block;
+        display: block; 
+        width: 100%;
+        margin-top: 1rem;
         
     }
     header img{
     width: 100%;
     }
-    #navbar li {
-       display: block;
-       width: 100%;
+
+    .menu-icon{
+        display: block;
+        color: #F2FBF4;
+        cursor: pointer;
+        width: 2rem;
+        margin-left: 50%;
     }
-    
-    #navbar li a {
+    #navbar{
+        display: none;
+        width: 100%;
+        margin-top: 2rem;
+        
+    }
+
+    #navbar ul{
+        display:none;
+
+    }
+
+    #navbar.show{
+        display:block;
+        width: 100%;
+
+    }
+    /* /* #navbar ul li {
+       /* display: block; */
+       /* width: 100%; */
+    /* }  */ 
+    #navbar ul li a {
         text-decoration: none;
+        display: block;
+        padding: 0;
         font-size: 18px;
         font-weight: 600;
         color: whitesmoke;
         transition: 0.3s ease;
     }
-    #navbar li a:hover, #navbar li a.active {
+    /* #navbar li a:hover, #navbar li a.active {
         color: #13c4c4;
     }
     
@@ -281,7 +315,7 @@ footer{
 
     #filter .select{
         width: 95%;
-    }
+    } */
 
     .cardBoxDiv{
         width: 100px;
@@ -294,4 +328,21 @@ footer{
     .cardBoxDiv img {
         width:40px ;
     }
+
+    .contenedorModal{
+        top: 35%; left: 20%;
+        z-index:5;
+    }
+    .contenedorModal img{
+        width: 10rem;
+    }
+
+    .close{
+        top: 35%; 
+        right: 22%;
+    }
+
  }
+
+
+ 
