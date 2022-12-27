@@ -17,8 +17,18 @@ import data from './data/rickandmorty/rickandmorty.js';
 //La data tomada del archivo './data/rickandmorty/rickandmorty.js'
 const dataResult = data.results;
 
-// console.log(dataResult, typeof dataResult);
-//  document.addEventListener("pantalla de inicio").style.display='';
+const botonMenu=document.querySelector(".menu-icon");
+const menu= document.querySelector(".navbar");
+botonMenu.addEventListener('click', ()=>{
+  console.log(menu)
+  menu.classList.toggle("show")});
+
+//   if(menu.classList.toggle("show")){  
+//     menu.removeClass('show');
+//  } else{
+//   menu.addClass('show');
+// }
+// })
 // document.addEventListener("filter").style.display='none';
 
 // Crear una funcion para que me tome los datos del objeto y mediante un div los va agregar
