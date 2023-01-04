@@ -83,6 +83,10 @@ main{
     color: whitesmoke;
 }
 
+.statisticalMain{
+    height: 300vh;
+}
+
 #presentacion{
     background-image:url("img/Fondo.jpg");
     background-size: cover; 
@@ -250,7 +254,19 @@ a:visited {
 #chart{
     font-size: larger;
     background-color: white;
+    margin-top: 20px;
+    border-radius: 10px;
+    border-color: #898989;
 }
+#charStatus{
+    width: 100px;
+    height: 200px;
+    background: white;
+    margin-top: 20px;
+    border-radius: 10px;
+    border-color: #898989;
+}
+
 footer{
     display: grid;
     color: #13c4c4;
@@ -260,6 +276,8 @@ footer{
     box-shadow: 0 5px 15px rgb(0, 0,0.6) ;
    
 }
+
+
 
 @media only screen and (max-width: 880px) {
     
@@ -360,5 +378,6 @@ footer{
 
  }
 
-
  
+
+
