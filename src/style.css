@@ -73,8 +73,8 @@ header {
 
 main{
    
-    height: 115vh;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
     background-size: cover;
     background-position: top 25% right 0;
     padding: 0 40px;
@@ -83,8 +83,14 @@ main{
     color: whitesmoke;
 }
 
+
 .statisticalMain{
-    height: 300vh;
+    /* height: 300vh; */
+    overflow: auto;
+}
+
+.graphics{
+    margin: 9rem;
 }
 
 #presentacion{
@@ -218,14 +224,17 @@ a:visited {
     z-index:2;
     background-color: #f0f4f0;
     width: 40%;
-    height: 42%;
-    padding-top: 3%;
     border-radius: 20px;
     font-size: 15px;
     text-align: center;
     animation-name: modal;
     animation-duration: 2s;
     color: #000000;
+    height: 65%;
+    
+ }
+ .contenedorModal h2 {
+    margin-top: 20px;
  }
 
  .contenedorModal img{
@@ -381,10 +390,16 @@ footer{
         width:40px ;
     }
 
+    .graphics{
+        margin: 0rem;
+    }
+
     .contenedorModal{
         width: 71%;
         top: 35%; left: 17%;
         z-index:5;
+        padding-top: 3%;
+        height: 42%;
     }
     .contenedorModal img{
         width: 10rem;
