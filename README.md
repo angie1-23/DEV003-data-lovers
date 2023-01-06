@@ -20,7 +20,7 @@ Rick y Morty es una serie de televisión americana de animación para adultos cr
 
 La serie se originó por un cortometraje rudimentario animado por Roiland para el festival de cine Channel 101 llamado Doc and Mharti, una parodia de los principales protagonistas de Back to the Future. Cuando la cadena NBC despidió a Harmon en 2013 por discusiones entre él y los ejecutivos de la serie que había creado, Community, él y Roiland desarrollaron una serie basada en los personajes ya creados por Roiland.
 
-![Getting Started](./Img Serie.jpeg)
+![Getting Started](./src/img/Img%20Serie.jpeg)
 
 
 
