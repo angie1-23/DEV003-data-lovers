@@ -103,17 +103,23 @@ Criterios de aceptación
 
 ## 5. Prototipo de baja fidelidad
 
-![Getting Started](./src/img/Prototipo%20de%20baja.jpg)
+![Getting Started](./src/img/Prototipo%20de%20baja%20-%20Homepage.jpg)
+![Getting Started](./src/img/Prototipo%20de%20baja-Character.jpg)
 
 ## 6. Prototipo de alta fidelidad
-
+Destock
 ![Getting Started](./src/img/Welcome.png)
 ![Getting Started](./src/img/Characters.png)
 ![Getting Started](./src/img/Characters%20modal.png)
 ![Getting Started](./src/img/statistics.png)
-[Figma](https://www.figma.com/file/zpUAV617XLAKNxqoVO8UW3/Rick-and-Morty-(Copy)?node-id=0%3A1&t=bjTV4323J62vcgvh-0) 
 
+[Figma Destock](https://www.figma.com/file/zpUAV617XLAKNxqoVO8UW3/Rick-and-Morty-(Copy)?node-id=0%3A1&t=4m7tkwd4lafoMfrI-0) 
+Mobile
+![Getting Started](./src/img/Homepage%20Mobil.png)
+![Getting Started](./src/img/Character%20Mobile.png)
+![Getting Started](./src/img/Character%20Modal.png)
 
+[Figma Mobile](https://www.figma.com/file/zpUAV617XLAKNxqoVO8UW3/Rick-and-Morty-(Copy)?node-id=239%3A2&t=4m7tkwd4lafoMfrI-0) 
 
 ## 7. Testeos de usabilidad
 
