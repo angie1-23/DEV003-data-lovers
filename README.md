@@ -104,7 +104,7 @@ Criterios de aceptación
 ## 5. Prototipo de baja fidelidad
 
 ![Getting Started](./src/img/Prototipo%20de%20baja%20-%20Homepage.jpg)
-![Getting Started](./src/img/Prototipo%20de%20baja-Character.jpg)
+![Getting Started](./src/img/Prototipo%20de%20baja%20-%20Character.jpg)
 
 ## 6. Prototipo de alta fidelidad
 Destock
