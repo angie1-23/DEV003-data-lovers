@@ -22,9 +22,9 @@ export const filterOrigin = (dataAll, string) => {
 export const filterCharacters = (dataAll,string) => {
   const nuevoArray = dataAll.filter((obj)=> obj.name.toLowerCase().startsWith(string));
   return nuevoArray;
- };
+};
 
- export const filterLocation= (dataAll, string) => {
+export const filterLocation= (dataAll, string) => {
   const nuevoArray = dataAll.filter((obj) => obj.location.name === string); // Alien Humanoide
   return nuevoArray;
 };
@@ -41,10 +41,14 @@ export const oderAlphabetically=(dataAll, string) =>{
     return orderAZ;
   }
 
-  if (string=== 'Z-A'){
+  else if (string=== 'Z-A'){
     return orderAZ.reverse();
   }
 
-  return orderAZ;
 }
 
+
+// export const percentSpecies = function (species, resultSpecies) {
+//   const percent = (resultSpecies.length *100)/species.length;
+//   return Math.round(percent);
+// }

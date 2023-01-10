@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="EN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Data Lovers Rick and Morty</title>
+    <link rel="stylesheet" href="style.css" />
+ 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"  />
+  </head>
+  
+  <body>
+    <header>
+      <a class="logo" href="#"><img src="./img/Logo Rick and morty.png" alt=""></a>
+      <span class="menu-icon"><img src ="./img/menuf.png"></span>
+      <nav>
+        <ul id="navbar" class="navbar">
+          <li><a  href="index.html">Home</a></li>
+          <li><a class="active" href="characters.html" >Characters</a></li>
+          <li><a href="location.html">Location</a></li>
+          <li><a href="Statistics.html">Statistics</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+    <br> 
+    <div id="pantalla de inicio" class="init">
+    
+    </div>
+    <div id="filter">
+     
+      <select name="gender" class="select" id="gender">
+        <option >Gender</option>
+        <option value="Female">Female</option>
+        <option value="Male">Male</option>
+        <option value="unknown">unknown</option>
+        </select>
+      <select name="species" class="select" id="species">
+          <option>Species</option>
+          <option value="Human">Human</option>
+          <option value="Alien">Alien</option>
+          <option value="Humanoid">Humanoid</option>
+          <option value="Animal">Animal</option>
+          <option value="unknown">Unknow</option>
+          <option value="Poopybutthole">Poopybuthole</option>
+          <option value="Mytholog">Mytholog</option>
+          <option value="Vampire">Vampire</option>
+          <option value="Robot">Robot</option>
+          <option value="Cronenberg">Cronenberg</option>
+          <option value="Disease">Disease</option>
+          <option value="Parasite">Parasite</option>
+          </select>
+     
+          <select name="status" class="select" id="status">
+            <option value="">Status</option>
+            <option value="Alive"> Alive</option>
+            <option value="unknown">Unknown</option>
+            <option value="Dead">Dead</option>
+          </select>
+
+          
+
+          <select name ="order" id="order" class="select">
+            <option value="">Order</option>
+            <option value="A-Z">A-Z</option>
+            <option value="Z-A">Z-A</option>
+          </select>
+
+
+          <!-- <label for="sug">Genero</label>
+          <input type="list">
+           -->
+          <input id="search" class="search" placeholder="Buscar Personajes">
+    </div>
+    <br>
+    <br>
+    <!-- <div id="root"></div> -->
+    <div id="resultCard" class="resultCard">
+    </div>
+ 
+  
+    </div>
+
+  </main>
+  <footer> <p>Creado por Ysis Longart y Angie Muñoz. <br> Derechos Reservados</p>
+  </footer>
+    <script src="main.js" type="module"></script>
+  
+
+  </body>
+</html>

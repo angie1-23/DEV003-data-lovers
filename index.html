@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="EN">
+  <head>
+    <meta charset="utf-8">
+    <title>Data Lovers Rick and Morty</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css" />
+    <style> @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100&display=swap'); </style>
+  </head>
+  
+  
+  <body>
+    <header>
+      <a class="logo" href="#"><img src="./img/Logo Rick and morty.png" alt=""></a>
+      <span class="menu-icon"><img src ="./img/menuf.png"></span>
+      <nav>
+        <ul id="navbar" class="navbar">
+          <li><a class="active" href="index.html">Home</a></li>
+          <li><a href="characters.html">Characters</a></li>
+          <li><a href="location.html">Location</a></li>
+          <li><a href="Statistics.html">Statistics</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main id="presentacion">
+    <br>
+    <br>
+    <section class="welcome">
+    <h2 >Welcome to Data Lovers!</h2>
+    <br>
+    <br>
+    <button id="inicio" class="wselect">Start </button>
+    </section>
+
+</main>
+  <footer> <p>Creado por Ysis Longart y Angie Muñoz. <br> Derechos Reservados</p>
+  </footer>
+    <script type="module">
+
+    const botonMenu = document.querySelector(".menu-icon");
+    const menu = document.querySelector(".navbar");
+    botonMenu.addEventListener('click', () => {
+
+      menu.classList.toggle("show")
+    });
+
+const startbtnEl = document.getElementById('inicio');
+
+startbtnEl.addEventListener('click',  ()=> {
+  window.location.href = 'characters.html';
+})
+
+    </script>
+
+  </body>
+</html>

@@ -1,18 +1,30 @@
-import {   filterGender,filterSpecies,filterOrigin,filterCharacters,filterLocation,
+import {   filterGender,filterSpecies,filterCharacters,
   filterStatus,oderAlphabetically
        
- } from './data.js';
+} from './data.js';
 // import rickandmorty from './data/rickandmorty/rickandmorty.js';
 // import data from './data/rickandmorty/rickandmorty.js';
 import data from './data/rickandmorty/rickandmorty.js';
 // console.log(example, data);
 
 
+
+
 //La data tomada del archivo './data/rickandmorty/rickandmorty.js'
 const dataResult = data.results;
 
-// console.log(dataResult, typeof dataResult);
-//  document.addEventListener("pantalla de inicio").style.display='';
+const botonMenu=document.querySelector(".menu-icon");
+const menu= document.querySelector(".navbar");
+botonMenu.addEventListener('click', ()=>{
+
+  menu.classList.toggle("show")});
+
+//   if(menu.classList.toggle("show")){  
+//     menu.removeClass('show');
+//  } else{
+//   menu.addClass('show');
+// }
+// })
 // document.addEventListener("filter").style.display='none';
 
 // Crear una funcion para que me tome los datos del objeto y mediante un div los va agregar
@@ -40,14 +52,22 @@ const containerElement = (obj) =>{
   //Mostrar el Modal con todos los datos completos
   divElement.querySelector('.cardBoxDiv').addEventListener('click', () => {
     divElement.querySelector('.contenedorModal').style.display = 'block';
-    document.querySelector('.my-modal').style.display = 'block';
+    
   });
  
   //Ocultar el modal con todos los datos
   divElement.querySelector('.close').addEventListener('click', () => {
     divElement.querySelector('.contenedorModal').style.display = 'none';
-    document.querySelector('.my-modal').style.display = 'none';
+   
   });
+  //Ocultar con escape
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape')
+      divElement.querySelector('.contenedorModal').style.display = 'none';
+    document.querySelector('.my-modal').style.display = 'none';
+    
+
+  })
 
   return divElement;
 }
@@ -57,7 +77,7 @@ const insertAllResult= document.querySelector('.resultCard');
 
 const verPersonajes = (data) =>{
   data.forEach(obj => {
-    insertAllResult.appendChild(containerElement(obj))
+    insertAllResult.appendChild(containerElement(obj));
   });
 }
 // verPersonajes(dataResult);
@@ -74,10 +94,10 @@ verPersonajes(dataResult);
 const filterGenderEl = document.querySelector("#gender");
 
 //Filtro por genero
-filterGenderEl.addEventListener('click', function() {
+filterGenderEl.addEventListener('change', function() {
   insertAllResult.innerHTML = "";
-  const gender = verPersonajes(filterGender(dataResult,filterGenderEl.value));
-  return gender;
+  verPersonajes(filterGender(dataResult,filterGenderEl.value));
+  
 });
 
 // Filtro por especie
@@ -87,43 +107,24 @@ filterGenderEl.addEventListener('click', function() {
 const filterSpeciesEl= document.querySelector("#species");
 
 // Filtro por especie
-filterSpeciesEl.addEventListener('click',function(){
+filterSpeciesEl.addEventListener('change',function(){
   insertAllResult.innerHTML="";
-  const specie =verPersonajes(filterSpecies(dataResult,filterSpeciesEl.value))
-  return specie;
+  verPersonajes(filterSpecies(dataResult,filterSpeciesEl.value))
+ 
 });
 
-// Boton por origin 
 
-const filterOriginEl= document.querySelector("#origin");
- // Filtro por origin
-
-filterOriginEl.addEventListener('click',function(){
-  insertAllResult.innerHTML="";
-  const origin=verPersonajes(filterOrigin(dataResult,filterOriginEl.value))
-  return origin;
-})
-
-// Boton por locacion
-
-const filterLocationEl= document.querySelector("#location");
- // Filtro por locacion
-
-filterLocationEl.addEventListener('click',function(){
-  insertAllResult.innerHTML="";
-  const location=verPersonajes(filterLocation(dataResult,filterLocationEl.value))
-  return location;
-})
+// })
 
 // Boton por Status
 
 const filterStatusEl= document.querySelector("#status");
- // Filtro por locacion
+// Filtro por locacion
 
- filterStatusEl.addEventListener('click',function(){
+filterStatusEl.addEventListener('change',function(){
   insertAllResult.innerHTML="";
-  const status=verPersonajes(filterStatus(dataResult,filterStatusEl.value))
-  return status;
+  verPersonajes(filterStatus(dataResult,filterStatusEl.value))
+  
 })
 // Buscador por personaje
 
@@ -135,6 +136,7 @@ searchCharacthersEl.addEventListener('input',function(){
   insertAllResult.innerHTML="";
   const characters = searchCharacthersEl.value.toLowerCase();
   verPersonajes(filterCharacters(dataResult,characters));
+
 })
 
 // Ordenar alfabeticamente
@@ -143,10 +145,10 @@ const orderCharacthersEl= document.querySelector("#order");
 
 // filtro alfabeto
 
-orderCharacthersEl.addEventListener('click',function(){
+orderCharacthersEl.addEventListener('change',function(){
   insertAllResult.innerHTML="";
-  const orderCharacther =verPersonajes(oderAlphabetically(dataResult,orderCharacthersEl.value));
-  return orderCharacther
+  verPersonajes(oderAlphabetically(dataResult,orderCharacthersEl.value));
+ 
 })
 
 

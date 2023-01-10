@@ -2,19 +2,23 @@
 <html lang="EN">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Data Lovers Rick and Morty</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
   </head>
   
   
   <body>
     <header>
       <a class="logo" href="#"><img src="./img/Logo Rick and morty.png" alt=""></a>
+      <span class="menu-icon"><img src ="./img/menuf.png"></span>
       <nav>
-        <ul id="navbar">
-          <li><a  href="home.html">Home</a></li>
-          <li><a class="active" href="index.html" >Characters</a></li>
-          <li><a href="https://www.hbomax.com/cl/es/series/urn:hbo:series:GXkRjxwjR68PDwwEAABKJ?utm_id=sa%7c71700000084770330%7c58700007212146179%7cp64688863620&gclid=CjwKCAiAs8acBhA1EiwAgRFdw17VvcOqzUWvqGPgV2siLDv6XlahYP_-rRtJmKfGAvLfdBlpDlkXaxoCap0QAvD_BwE&gclsrc=aw.ds&countryRedirect=1" target="_blank">Episodes</a></li>
+        <ul id="navbar" class="navbar">
+          <li><a  href="index.html">Home</a></li>
+          <li><a  href="characters.html" >Characters</a></li>
+          <li><a class="active" href="location.html">Location</a></li>
+          <li><a  href="Statistics.html">Statistics</a></li>
         </ul>
       </nav>
     </header>
@@ -23,28 +27,9 @@
     <div id="pantalla de inicio" class="init">
     
     </div>
-    <div id="filter">
+    <div id="filter-location">
      
-      <select name="gender" class="select" id="gender">
-        <option>Gender</option>
-        <option value="Female">Female</option>
-        <option value="Male">Male</option>
-        </select>
-      <select name="species" class="select" id="species">
-          <option>Species</option>
-          <option value="Human">Human</option>
-          <option value="Alien">Alien</option>
-          <option value="Humanoid">Humanoid</option>
-          <option value="Animal">Animal</option>
-          <option value="unknown">Unknow</option>
-          <option value="Poopybutthole">Poopybuthole</option>
-          <option value="Mytholog">Mytholog</option>
-          <option value="Vampire">Vampire</option>
-          <option value="Robot">Robot</option>
-          <option value="Cronenberg">Cronenberg</option>
-          <option value="Disease">Disease</option>
-          <option value="Parasite">Parasite</option>
-          </select>
+      
       <select name="origin" class="select" id="origin">
             <option value="">Origin</option>
             <option value="Earth (C-137)">Earth (C-137)</option>
@@ -56,12 +41,10 @@
             <option value="Venzenulon 7">Venzenulon 7</option>
             <option value="Interdimensional Cable">Interdimensional Cable</option>
           </select>
-          <select name="status" class="select" id="status">
-            <option value="">Status</option>
-            <option value="Alive"> Alive</option>
-            <option value="unknown">Unknown</option>
-            <option value="Dead">Dead</option>
-          </select>
+             <!-- <label for="sug">Genero</label>
+          <input type="list">
+           -->
+           
 
           <select name="location" class="select" id="location">
             <option value="">Location</option>
@@ -127,17 +110,8 @@
             <option value="Interdimensional Cable">Interdimensional Cable</option>
           </select>
 
-          <select name ="order" id="order" class="select">
-            <option value="">Order</option>
-            <option value="A-Z">A-Z</option>
-            <option value="Z-A">Z-A</option>
-          </select>
-
-
-          <!-- <label for="sug">Genero</label>
-          <input type="list">
-           -->
-          <input id="search" class="search" placeholder="Buscar Personajes">
+  
+      
     </div>
     <br>
     <br>
@@ -150,8 +124,8 @@
     </div>
 
   </main>
-  <footer> Creado por Ysis Longart y Angie Muñoz. Derechos Reservados
+  <footer> <p>Creado por Ysis Longart y Angie Muñoz. <br> Derechos Reservados</p>
   </footer>
-    <script src="main.js" type="module"></script>
+    <script src="mainlocation.js" type="module"></script>
   </body>
 </html>
