@@ -64,9 +64,6 @@ const containerElement = (obj) =>{
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape')
       divElement.querySelector('.contenedorModal').style.display = 'none';
-    document.querySelector('.my-modal').style.display = 'none';
-    
-
   })
 
   return divElement;

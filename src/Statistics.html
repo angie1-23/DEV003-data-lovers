@@ -107,10 +107,24 @@
 
 
     const totalData = dataRick.length;
+    const datar=data.results;
     let countSpecies = {};
     let countStatus = {};
     let countLocation = {};
     let countOrigin = {};
+
+
+    // console.log(totalData);
+
+    // let suma={};
+    // for (let i=0;i<totalData; i++){
+    //   if (!suma.hasOwnProperty(datar[i].species)){
+    //     suma [datar[i].species] = 0;
+    //   }
+    //   else suma[datar[i].species]++;
+    // }
+    
+    // console.log(suma)
 
     dataRick.forEach((item) => {
 
@@ -121,6 +135,7 @@
       }
 
     });
+
 
     dataRick.forEach((item) => {
 
